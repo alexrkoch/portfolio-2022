@@ -1,3 +1,26 @@
-// contains all the resets, variables, mixins, and utility classes
+// Functions
+@use "sass:math";
+@function rem($pixels) {
+  @return math.div($pixels, 16) + rem;
+}
 
-$font-stack: Roboto, sans-serifs;
+// Typography
+$font-header: Poppins, sans-serifs;
+$font-body: Work Sans, sans-serifs;
+@mixin font-hero {
+  font-size: rem(50);
+  font-weight: 700;
+  font-family: $font-header;
+}
+
+// Color Palette
+$color-accent: #4d3efe;
+$color-accent-alt: #fb225a;
+$color-strongest-text: #030137;
+$color-strong-text: #032074;
+$color-medium-text: #514e7c;
+$color-subtle-text: #66669a;
+$color-borders: #66669a;
+$color-background: #deddeb;
+$color-light-background: #f0eff5;
+$color-near-white: #f8f9fb;
