@@ -1,16 +1,50 @@
 // contains page structure, containers and grid system
 
+// Variables
+$padding-primary: 30px; // static
+$padding-secondary: 15px; // static
+$navbar-height: rem(60); // dynamic
+$navbar-headbutt: 65; // compare to navbar-height above
+$content-max-width: 800px;
+$content-min-width: 320px;
+$content-margins: 20px;
+
 body {
   display: grid;
-  grid-template-columns: 50px auto 50px;
-  grid-template-rows: 50px auto;
+  grid-template-columns:
+    minmax($content-margins, 1fr)
+    minmax($content-min-width, $content-max-width)
+    minmax($content-margins, 1fr);
+  grid-template-rows: $navbar-height auto;
   grid-template-areas:
     "left-margin header right-margin"
-    "left-margin content right-margin"
+    "left-margin hero right-margin"
+    "left-margin portfolio right-margin"
+    "left-margin resume right-margin"
     "left-margin footer right-margin";
   background-color: $color-background;
 }
 
 .navbar {
   grid-area: header;
+}
+
+.hero {
+  grid-area: hero;
+  img {
+    width: 340px;
+    border-radius: 100%;
+  }
+}
+
+.portfolio {
+  grid-area: portfolio;
+}
+
+.resume {
+  grid-area: resume;
+}
+
+.footer {
+  grid-area: footer;
 }

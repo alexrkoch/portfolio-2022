@@ -6,23 +6,55 @@
   box-sizing: border-box;
 }
 
-.hero-header {
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+  font-family: "Poppins", sans-serifs;
+}
+
+p {
+  font-family: "Work Sans", sans-serifs;
+}
+
+.hero__header {
   font-size: 3.125rem;
   font-weight: 700;
   line-height: 3.75rem;
-  font-family: Poppins, sans-serifs;
+  font-family: "Poppins", sans-serifs;
 }
-
 body {
   display: grid;
-  grid-template-columns: 50px auto 50px;
-  grid-template-rows: 50px auto;
-  grid-template-areas: "left-margin header right-margin" "left-margin content right-margin" "left-margin footer right-margin";
+  grid-template-columns: minmax(20px, 1fr) minmax(320px, 800px) minmax(20px, 1fr);
+  grid-template-rows: 3.75rem auto;
+  grid-template-areas: "left-margin header right-margin" "left-margin hero right-margin" "left-margin portfolio right-margin" "left-margin resume right-margin" "left-margin footer right-margin";
   background-color: #deddeb;
 }
 
 .navbar {
   grid-area: header;
+}
+
+.hero {
+  grid-area: hero;
+}
+.hero img {
+  width: 340px;
+  border-radius: 100%;
+}
+
+.portfolio {
+  grid-area: portfolio;
+}
+
+.resume {
+  grid-area: resume;
+}
+
+.footer {
+  grid-area: footer;
 }
 
 /*# sourceMappingURL=style.css.map */

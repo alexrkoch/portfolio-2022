@@ -26,11 +26,31 @@ $color-light-background: #f0eff5;
 $color-near-white: #f8f9fb;
 
 // Typography
-$font-header: Poppins, sans-serifs;
-$font-body: Work Sans, sans-serifs;
-.hero-header {
-  font-size: rem(50);
-  font-weight: 700;
-  line-height: rem(60);
+$font-header: "Poppins", sans-serifs;
+$font-body: "Work Sans", sans-serifs;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
   font-family: $font-header;
+}
+
+p {
+  font-family: $font-body;
+}
+
+.hero {
+  &__header {
+    font-size: rem(50);
+    font-weight: 700;
+    line-height: rem(60);
+    font-family: $font-header;
+  }
+
+  p {
+    // font-family: "Work Sans";
+  }
 }
