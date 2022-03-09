@@ -1,1 +1,16 @@
 // contains page structure, containers and grid system
+
+body {
+  display: grid;
+  grid-template-columns: 50px auto 50px;
+  grid-template-rows: 50px auto;
+  grid-template-areas:
+    "left-margin header right-margin"
+    "left-margin content right-margin"
+    "left-margin footer right-margin";
+  background-color: $color-background;
+}
+
+.navbar {
+  grid-area: header;
+}

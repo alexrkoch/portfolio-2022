@@ -13,4 +13,16 @@
   font-family: Poppins, sans-serifs;
 }
 
+body {
+  display: grid;
+  grid-template-columns: 50px auto 50px;
+  grid-template-rows: 50px auto;
+  grid-template-areas: "left-margin header right-margin" "left-margin content right-margin" "left-margin footer right-margin";
+  background-color: #deddeb;
+}
+
+.navbar {
+  grid-area: header;
+}
+
 /*# sourceMappingURL=style.css.map */
