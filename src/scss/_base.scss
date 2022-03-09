@@ -7,9 +7,10 @@
 // Typography
 $font-header: Poppins, sans-serifs;
 $font-body: Work Sans, sans-serifs;
-@mixin font-hero {
+.hero-header {
   font-size: rem(50);
   font-weight: 700;
+  line-height: rem(60);
   font-family: $font-header;
 }
 
