@@ -1,8 +1,8 @@
 // contains page structure, containers and grid system
 
 // Variables
-$padding-primary: 30px; // static
-$padding-secondary: 15px; // static
+$padding-primary: 32px; // static
+$padding-secondary: 16px; // static
 $navbar-height: rem(60); // dynamic
 $navbar-headbutt: 65; // compare to navbar-height above
 $content-max-width: 800px;
@@ -22,11 +22,30 @@ body {
     "left-margin portfolio right-margin"
     "left-margin resume right-margin"
     "left-margin footer right-margin";
-  background-color: $color-background;
 }
 
-.navbar {
+.header {
   grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "logo socials navigation";
+  align-items: center;
+  &__logo {
+    grid-area: logo;
+  }
+  &__socials {
+    grid-area: socials;
+    a {
+      padding-left: $padding-secondary;
+    }
+  }
+  &__navigation {
+    grid-area: navigation;
+    a:link {
+      padding-left: $padding-secondary;
+    }
+  }
 }
 
 .hero {
