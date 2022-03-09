@@ -4,14 +4,13 @@
   @return math.div($pixels, 16) + rem;
 }
 
-// Typography
-$font-header: Poppins, sans-serifs;
-$font-body: Work Sans, sans-serifs;
-.hero-header {
-  font-size: rem(50);
-  font-weight: 700;
-  line-height: rem(60);
-  font-family: $font-header;
+// Normalize and Reset
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 // Color Palette
@@ -25,3 +24,13 @@ $color-borders: #66669a;
 $color-background: #deddeb;
 $color-light-background: #f0eff5;
 $color-near-white: #f8f9fb;
+
+// Typography
+$font-header: Poppins, sans-serifs;
+$font-body: Work Sans, sans-serifs;
+.hero-header {
+  font-size: rem(50);
+  font-weight: 700;
+  line-height: rem(60);
+  font-family: $font-header;
+}
