@@ -1,8 +1,10 @@
 // contains page structure, containers and grid system
 
 // Variables
+$margin-section: 80px; //static
 $padding-primary: 32px; // static
 $padding-secondary: 16px; // static
+$padding-tiny: 8px; // static
 $navbar-height: rem(60); // dynamic
 $navbar-headbutt: 65; // compare to navbar-height above
 $content-max-width: 800px;
@@ -17,16 +19,18 @@ body {
     minmax($content-margins, 1fr);
   grid-template-rows: $navbar-height auto;
   grid-template-areas:
-    "left-margin header right-margin"
-    "left-margin hero right-margin"
-    "left-margin portfolio right-margin"
-    "left-margin resume right-margin"
-    "left-margin footer right-margin";
+    "... header ..."
+    "... hero ..."
+    "... portfolio ..."
+    "... resume ..."
+    "... footer ...";
 }
 
 .header {
   grid-area: header;
   display: grid;
+  position: sticky;
+  top: 0;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas: "logo socials navigation";
@@ -37,7 +41,7 @@ body {
   &__socials {
     grid-area: socials;
     a {
-      padding-left: $padding-secondary;
+      padding-left: $padding-tiny;
     }
   }
   &__navigation {
@@ -50,14 +54,47 @@ body {
 
 .hero {
   grid-area: hero;
-  img {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  grid-template-rows: rem(100) auto;
+  grid-template-areas:
+    "header image"
+    "body image";
+  margin-bottom: $margin-section;
+  &__header {
+    grid-area: header;
+    padding-top: rem(50);
+  }
+  &__body {
+    grid-area: body;
+    padding-top: rem(50);
+    line-height: rem(25);
+  }
+  &__image {
+    grid-area: image;
     width: 340px;
     border-radius: 100%;
   }
 }
 
+.portfolio-container {
+  grid-area: 3 / 1 / 4 / 4;
+  margin-bottom: 2000px;
+}
+
 .portfolio {
-  grid-area: portfolio;
+  padding-top: $margin-section;
+  display: grid;
+  grid-template-columns:
+    minmax($content-margins, 1fr)
+    minmax($content-min-width, $content-max-width)
+    minmax($content-margins, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "... content ...";
+
+  &__header {
+    grid-area: content;
+  }
 }
 
 .resume {

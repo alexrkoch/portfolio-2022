@@ -34,60 +34,6 @@ body {
   background-color: $color-background;
 }
 
-.header {
-  background-color: $color-background;
-  &__socials {
-    a:link {
-      font-family: $font-body;
-      color: $color-strongest-text;
-      text-decoration: none;
-    }
-    a:visited {
-      font-family: $font-body;
-      color: $color-strongest-text;
-    }
-    a:hover,
-    a:active {
-      font-family: $font-body;
-      color: $color-accent-alt;
-      transition: 0.6s;
-    }
-  }
-  &__navigation {
-    a:link {
-      font-family: $font-body;
-      color: $color-strongest-text;
-      text-decoration: underline 0.2em rgba(251, 34, 90, 0);
-      text-underline-offset: 1.5px;
-      transition: text-decoration-color 0.6s;
-    }
-    a:visited {
-      font-family: $font-body;
-      color: $color-strongest-text;
-      text-decoration: none;
-    }
-    a:hover,
-    a:active {
-      font-family: $font-body;
-      color: $color-accent-alt;
-      text-decoration: underline 0.2em rgba(251, 34, 90, 1);
-      text-underline-offset: 1.5px;
-      transition: text-decoration-color 0.6s;
-    }
-    // a:link {
-    //   box-shadow: inset 0 0 0 0 $color-accent-alt;
-    //   color: $color-accent-alt;
-    //   margin: 0 -0.25rem;
-    //   padding: 0 0.25rem;
-    //   transition: color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-    // }
-    // a:hover {
-    //   box-shadow: inset 100px 0 0 0 $color-accent-alt;
-    //   color: $color-background;
-    // }
-  }
-}
-
 h1,
 h2,
 h3,
@@ -101,10 +47,6 @@ p {
   font-family: $font-body;
 }
 
-// a:link - a normal, unvisited link
-// a:visited - a link the user has visited
-// a:hover - a link when the user mouses over it
-// a:active - a link the moment it is clicked
 a:link {
   color: $color-accent;
   text-decoration-color: $color-accent;
@@ -132,6 +74,76 @@ a:active {
   text-underline-offset: 1.5px;
 }
 
+.header {
+  background-color: $color-background;
+  scroll-behavior: smooth;
+  &__logo {
+    text-decoration: none;
+    p {
+      font-family: $font-header;
+      font-size: rem(24);
+      font-weight: 700;
+      color: $color-strongest-text;
+      text-decoration: none;
+      transition: color 0.6s;
+    }
+    p:hover {
+      color: $color-accent-alt;
+      transition: color 0.4s;
+    }
+  }
+  &__socials {
+    margin: 0 auto;
+    a:link {
+      font-family: $font-body;
+      color: $color-strongest-text;
+      text-decoration: none;
+      // transition: 0.6s;
+    }
+    a:visited {
+      font-family: $font-body;
+      color: $color-strongest-text;
+    }
+    a:hover,
+    a:active {
+      font-family: $font-body;
+      color: $color-accent-alt;
+      transition: 0.6s;
+    }
+    svg {
+      fill: $color-strongest-text;
+      transition: 0.6s;
+    }
+    svg:hover {
+      fill: $color-accent-alt;
+      transition: 0.4s;
+    }
+  }
+  &__navigation {
+    text-align: right;
+    a:link {
+      font-family: $font-body;
+      color: $color-strongest-text;
+      text-decoration: underline 0.2em rgba(251, 34, 90, 0);
+      text-underline-offset: 1.5px;
+      transition: text-decoration-color 0.6s, color 0.6s;
+    }
+    a:visited {
+      font-family: $font-body;
+      color: $color-strongest-text;
+      text-decoration: none;
+    }
+    a:hover,
+    a:active {
+      font-family: $font-body;
+      color: $color-accent-alt;
+      text-decoration: underline 0.2em rgba(251, 34, 90, 1);
+      text-underline-offset: 1.5px;
+      transition: text-decoration-color 0.5s, color 0.5s;
+    }
+  }
+}
+
 .hero {
   &__header {
     font-size: rem(50);
@@ -145,11 +157,6 @@ a:active {
   }
 }
 
-.header {
-  &__socials {
-    margin: 0 auto;
-  }
-  &__navigation {
-    text-align: right;
-  }
+.portfolio {
+  background-color: $color-light-background;
 }

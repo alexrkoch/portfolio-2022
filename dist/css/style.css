@@ -10,45 +10,6 @@ body {
   background-color: #deddeb;
 }
 
-.header {
-  background-color: #deddeb;
-}
-.header__socials a:link {
-  font-family: "Work Sans", sans-serifs;
-  color: #030137;
-  text-decoration: none;
-}
-.header__socials a:visited {
-  font-family: "Work Sans", sans-serifs;
-  color: #030137;
-}
-.header__socials a:hover,
-.header__socials a:active {
-  font-family: "Work Sans", sans-serifs;
-  color: #fb225a;
-  transition: 0.6s;
-}
-.header__navigation a:link {
-  font-family: "Work Sans", sans-serifs;
-  color: #030137;
-  text-decoration: underline 0.2em rgba(251, 34, 90, 0);
-  text-underline-offset: 1.5px;
-  transition: text-decoration-color 0.6s;
-}
-.header__navigation a:visited {
-  font-family: "Work Sans", sans-serifs;
-  color: #030137;
-  text-decoration: none;
-}
-.header__navigation a:hover,
-.header__navigation a:active {
-  font-family: "Work Sans", sans-serifs;
-  color: #fb225a;
-  text-decoration: underline 0.2em #fb225a;
-  text-underline-offset: 1.5px;
-  transition: text-decoration-color 0.6s;
-}
-
 h1,
 h2,
 h3,
@@ -90,29 +51,97 @@ a:active {
   text-underline-offset: 1.5px;
 }
 
+.header {
+  background-color: #deddeb;
+  scroll-behavior: smooth;
+}
+.header__logo {
+  text-decoration: none;
+}
+.header__logo p {
+  font-family: "Poppins", sans-serifs;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #030137;
+  text-decoration: none;
+  transition: color 0.6s;
+}
+.header__logo p:hover {
+  color: #fb225a;
+  transition: color 0.4s;
+}
+.header__socials {
+  margin: 0 auto;
+}
+.header__socials a:link {
+  font-family: "Work Sans", sans-serifs;
+  color: #030137;
+  text-decoration: none;
+}
+.header__socials a:visited {
+  font-family: "Work Sans", sans-serifs;
+  color: #030137;
+}
+.header__socials a:hover,
+.header__socials a:active {
+  font-family: "Work Sans", sans-serifs;
+  color: #fb225a;
+  transition: 0.6s;
+}
+.header__socials svg {
+  fill: #030137;
+  transition: 0.6s;
+}
+.header__socials svg:hover {
+  fill: #fb225a;
+  transition: 0.4s;
+}
+.header__navigation {
+  text-align: right;
+}
+.header__navigation a:link {
+  font-family: "Work Sans", sans-serifs;
+  color: #030137;
+  text-decoration: underline 0.2em rgba(251, 34, 90, 0);
+  text-underline-offset: 1.5px;
+  transition: text-decoration-color 0.6s, color 0.6s;
+}
+.header__navigation a:visited {
+  font-family: "Work Sans", sans-serifs;
+  color: #030137;
+  text-decoration: none;
+}
+.header__navigation a:hover,
+.header__navigation a:active {
+  font-family: "Work Sans", sans-serifs;
+  color: #fb225a;
+  text-decoration: underline 0.2em #fb225a;
+  text-underline-offset: 1.5px;
+  transition: text-decoration-color 0.5s, color 0.5s;
+}
+
 .hero__header {
   font-size: 3.125rem;
   font-weight: 700;
   line-height: 3.75rem;
   font-family: "Poppins", sans-serifs;
 }
-.header__socials {
-  margin: 0 auto;
-}
-.header__navigation {
-  text-align: right;
+.portfolio {
+  background-color: #f0eff5;
 }
 
 body {
   display: grid;
   grid-template-columns: minmax(20px, 1fr) minmax(320px, 800px) minmax(20px, 1fr);
   grid-template-rows: 3.75rem auto;
-  grid-template-areas: "left-margin header right-margin" "left-margin hero right-margin" "left-margin portfolio right-margin" "left-margin resume right-margin" "left-margin footer right-margin";
+  grid-template-areas: "... header ..." "... hero ..." "... portfolio ..." "... resume ..." "... footer ...";
 }
 
 .header {
   grid-area: header;
   display: grid;
+  position: sticky;
+  top: 0;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas: "logo socials navigation";
@@ -125,7 +154,7 @@ body {
   grid-area: socials;
 }
 .header__socials a {
-  padding-left: 16px;
+  padding-left: 8px;
 }
 .header__navigation {
   grid-area: navigation;
@@ -136,14 +165,41 @@ body {
 
 .hero {
   grid-area: hero;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  grid-template-rows: 6.25rem auto;
+  grid-template-areas: "header image" "body image";
+  margin-bottom: 80px;
 }
-.hero img {
+.hero__header {
+  grid-area: header;
+  padding-top: 3.125rem;
+}
+.hero__body {
+  grid-area: body;
+  padding-top: 3.125rem;
+  line-height: 1.5625rem;
+}
+.hero__image {
+  grid-area: image;
   width: 340px;
   border-radius: 100%;
 }
 
+.portfolio-container {
+  grid-area: 3/1/4/4;
+  margin-bottom: 2000px;
+}
+
 .portfolio {
-  grid-area: portfolio;
+  padding-top: 80px;
+  display: grid;
+  grid-template-columns: minmax(20px, 1fr) minmax(320px, 800px) minmax(20px, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "... content ...";
+}
+.portfolio__header {
+  grid-area: content;
 }
 
 .resume {
