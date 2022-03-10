@@ -6,7 +6,7 @@ $padding-primary: 32px; // static
 $padding-secondary: 16px; // static
 $padding-tiny: 8px; // static
 $navbar-height: rem(60); // dynamic
-$navbar-headbutt: 65; // compare to navbar-height above
+$navbar-headbutt: 80; // compare to navbar-height above
 $content-max-width: 800px;
 $content-min-width: 320px;
 $content-margins: 20px;
@@ -24,6 +24,13 @@ body {
     "... portfolio ..."
     "... resume ..."
     "... footer ...";
+}
+
+#portfolio-link,
+#resume-link {
+  margin-top: rem(-1 * ($navbar-headbutt));
+  padding-bottom: rem($navbar-headbutt);
+  display: block;
 }
 
 .header {
@@ -90,10 +97,26 @@ body {
     minmax($content-min-width, $content-max-width)
     minmax($content-margins, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: "... content ...";
+  grid-template-areas:
+    "... header ..."
+    "... toc ...";
 
   &__header {
-    grid-area: content;
+    grid-area: header;
+    padding-bottom: $padding-secondary;
+  }
+  &__table-of-contents {
+    grid-area: toc;
+    h3 {
+      color: $color-medium-text;
+      padding-bottom: $padding-secondary;
+    }
+    ul {
+      padding-left: $padding-primary;
+    }
+    li {
+      padding-bottom: $padding-tiny;
+    }
   }
 }
 

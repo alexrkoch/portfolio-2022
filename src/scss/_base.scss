@@ -47,18 +47,19 @@ p {
   font-family: $font-body;
 }
 
-a:link {
-  color: $color-accent;
-  text-decoration-color: $color-accent;
-  text-decoration-thickness: 0.2em;
-  text-underline-offset: 1.5px;
-}
-a:visited {
+a {
+  font-family: $font-body;
   color: $color-medium-text;
   text-decoration-color: $color-medium-text;
   text-decoration-thickness: 0.2em;
   text-underline-offset: 1.5px;
 }
+// a:visited {
+//   color: $color-medium-text;
+//   text-decoration-color: $color-medium-text;
+//   text-decoration-thickness: 0.2em;
+//   text-underline-offset: 1.5px;
+// }
 
 a:hover {
   color: $color-accent-alt;
@@ -159,4 +160,9 @@ a:active {
 
 .portfolio {
   background-color: $color-light-background;
+  &__table-of-contents {
+    ul {
+      list-style: outside none none;
+    }
+  }
 }

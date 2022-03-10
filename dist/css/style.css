@@ -23,14 +23,8 @@ p {
   font-family: "Work Sans", sans-serifs;
 }
 
-a:link {
-  color: #4d3efe;
-  text-decoration-color: #4d3efe;
-  text-decoration-thickness: 0.2em;
-  text-underline-offset: 1.5px;
-}
-
-a:visited {
+a {
+  font-family: "Work Sans", sans-serifs;
   color: #514e7c;
   text-decoration-color: #514e7c;
   text-decoration-thickness: 0.2em;
@@ -129,12 +123,22 @@ a:active {
 .portfolio {
   background-color: #f0eff5;
 }
+.portfolio__table-of-contents ul {
+  list-style: outside none none;
+}
 
 body {
   display: grid;
   grid-template-columns: minmax(20px, 1fr) minmax(320px, 800px) minmax(20px, 1fr);
   grid-template-rows: 3.75rem auto;
   grid-template-areas: "... header ..." "... hero ..." "... portfolio ..." "... resume ..." "... footer ...";
+}
+
+#portfolio-link,
+#resume-link {
+  margin-top: -5rem;
+  padding-bottom: 5rem;
+  display: block;
 }
 
 .header {
@@ -196,10 +200,24 @@ body {
   display: grid;
   grid-template-columns: minmax(20px, 1fr) minmax(320px, 800px) minmax(20px, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: "... content ...";
+  grid-template-areas: "... header ..." "... toc ...";
 }
 .portfolio__header {
-  grid-area: content;
+  grid-area: header;
+  padding-bottom: 16px;
+}
+.portfolio__table-of-contents {
+  grid-area: toc;
+}
+.portfolio__table-of-contents h3 {
+  color: #514e7c;
+  padding-bottom: 16px;
+}
+.portfolio__table-of-contents ul {
+  padding-left: 32px;
+}
+.portfolio__table-of-contents li {
+  padding-bottom: 8px;
 }
 
 .resume {
