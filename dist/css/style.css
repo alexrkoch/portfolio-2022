@@ -29,6 +29,7 @@ a {
   text-decoration-color: #514e7c;
   text-decoration-thickness: 0.2em;
   text-underline-offset: 1.5px;
+  transition: color 0.5s;
 }
 
 a:hover {
@@ -36,13 +37,7 @@ a:hover {
   text-decoration-color: #fb225a;
   text-decoration-thickness: 0.2em;
   text-underline-offset: 1.5px;
-}
-
-a:active {
-  color: #fb225a;
-  text-decoration-color: #fb225a;
-  text-decoration-thickness: 0.2em;
-  text-underline-offset: 1.5px;
+  transition: color 0.3s;
 }
 
 .header {
@@ -58,11 +53,11 @@ a:active {
   font-weight: 700;
   color: #030137;
   text-decoration: none;
-  transition: color 0.6s;
+  transition: color 0.5s;
 }
 .header__logo p:hover {
   color: #fb225a;
-  transition: color 0.4s;
+  transition: color 0.3s;
 }
 .header__socials {
   margin: 0 auto;
@@ -80,15 +75,15 @@ a:active {
 .header__socials a:active {
   font-family: "Work Sans", sans-serifs;
   color: #fb225a;
-  transition: 0.6s;
+  transition: 0.3s;
 }
 .header__socials svg {
   fill: #030137;
-  transition: 0.6s;
+  transition: 0.5s;
 }
 .header__socials svg:hover {
   fill: #fb225a;
-  transition: 0.4s;
+  transition: 0.3s;
 }
 .header__navigation {
   text-align: right;
@@ -204,7 +199,7 @@ body {
 }
 .portfolio__header {
   grid-area: header;
-  padding-bottom: 16px;
+  padding-bottom: 32px;
 }
 .portfolio__table-of-contents {
   grid-area: toc;

@@ -29,6 +29,10 @@ $color-near-white: #f8f9fb;
 $font-header: "Poppins", sans-serifs;
 $font-body: "Work Sans", sans-serifs;
 
+// Animation
+$link-transition-in: 0.3s;
+$link-transition-out: 0.5s;
+
 // Colors
 body {
   background-color: $color-background;
@@ -53,6 +57,7 @@ a {
   text-decoration-color: $color-medium-text;
   text-decoration-thickness: 0.2em;
   text-underline-offset: 1.5px;
+  transition: color $link-transition-out;
 }
 // a:visited {
 //   color: $color-medium-text;
@@ -66,14 +71,15 @@ a:hover {
   text-decoration-color: $color-accent-alt;
   text-decoration-thickness: 0.2em;
   text-underline-offset: 1.5px;
+  transition: color $link-transition-in;
 }
 
-a:active {
-  color: $color-accent-alt;
-  text-decoration-color: $color-accent-alt;
-  text-decoration-thickness: 0.2em;
-  text-underline-offset: 1.5px;
-}
+// a:active {
+//   color: $color-accent-alt;
+//   text-decoration-color: $color-accent-alt;
+//   text-decoration-thickness: 0.2em;
+//   text-underline-offset: 1.5px;
+// }
 
 .header {
   background-color: $color-background;
@@ -86,11 +92,11 @@ a:active {
       font-weight: 700;
       color: $color-strongest-text;
       text-decoration: none;
-      transition: color 0.6s;
+      transition: color $link-transition-out;
     }
     p:hover {
       color: $color-accent-alt;
-      transition: color 0.4s;
+      transition: color $link-transition-in;
     }
   }
   &__socials {
@@ -109,15 +115,15 @@ a:active {
     a:active {
       font-family: $font-body;
       color: $color-accent-alt;
-      transition: 0.6s;
+      transition: $link-transition-in;
     }
     svg {
       fill: $color-strongest-text;
-      transition: 0.6s;
+      transition: $link-transition-out;
     }
     svg:hover {
       fill: $color-accent-alt;
-      transition: 0.4s;
+      transition: $link-transition-in;
     }
   }
   &__navigation {
