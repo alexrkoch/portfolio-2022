@@ -27,21 +27,24 @@ a {
   font-family: "Work Sans", sans-serifs;
   color: #514e7c;
   text-decoration-color: #514e7c;
-  text-decoration-thickness: 0.2em;
-  text-underline-offset: 1.5px;
-  transition: color 0.5s;
+  text-decoration-thickness: 0.25em;
+  text-underline-offset: 2px;
+  transition: all 0.5s;
 }
 
 a:hover {
   color: #fb225a;
   text-decoration-color: #fb225a;
-  text-decoration-thickness: 0.2em;
-  text-underline-offset: 1.5px;
-  transition: color 0.3s;
+  text-decoration-thickness: 0.25em;
+  text-underline-offset: 2px;
+  transition: all 0.3s;
+}
+
+.header-container {
+  background-color: #deddeb;
 }
 
 .header {
-  background-color: #deddeb;
   scroll-behavior: smooth;
 }
 .header__logo {
@@ -92,8 +95,9 @@ a:hover {
   font-family: "Work Sans", sans-serifs;
   color: #030137;
   text-decoration: underline 0.2em rgba(251, 34, 90, 0);
-  text-underline-offset: 1.5px;
-  transition: text-decoration-color 0.6s, color 0.6s;
+  text-decoration-thickness: 0.25em;
+  text-underline-offset: 2px;
+  transition: all 0.5s;
 }
 .header__navigation a:visited {
   font-family: "Work Sans", sans-serifs;
@@ -105,8 +109,9 @@ a:hover {
   font-family: "Work Sans", sans-serifs;
   color: #fb225a;
   text-decoration: underline 0.2em #fb225a;
-  text-underline-offset: 1.5px;
-  transition: text-decoration-color 0.5s, color 0.5s;
+  text-decoration-thickness: 0.25em;
+  text-underline-offset: 2px;
+  transition: all 0.3s;
 }
 
 .hero__header {
@@ -136,11 +141,19 @@ body {
   display: block;
 }
 
+.header-container {
+  grid-area: 1/1/2/4;
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-columns: minmax(20px, 1fr) minmax(320px, 800px) minmax(20px, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "... header ...";
+}
+
 .header {
   grid-area: header;
   display: grid;
-  position: sticky;
-  top: 0;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas: "logo socials navigation";
@@ -212,7 +225,7 @@ body {
   padding-left: 32px;
 }
 .portfolio__table-of-contents li {
-  padding-bottom: 8px;
+  padding-bottom: 16px;
 }
 
 .resume {

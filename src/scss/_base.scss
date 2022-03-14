@@ -28,6 +28,8 @@ $color-near-white: #f8f9fb;
 // Typography
 $font-header: "Poppins", sans-serifs;
 $font-body: "Work Sans", sans-serifs;
+$link-underline-thickness: 0.25em;
+$link-underline-offset: 2px;
 
 // Animation
 $link-transition-in: 0.3s;
@@ -55,34 +57,24 @@ a {
   font-family: $font-body;
   color: $color-medium-text;
   text-decoration-color: $color-medium-text;
-  text-decoration-thickness: 0.2em;
-  text-underline-offset: 1.5px;
-  transition: color $link-transition-out;
+  text-decoration-thickness: $link-underline-thickness;
+  text-underline-offset: $link-underline-offset;
+  transition: all $link-transition-out;
 }
-// a:visited {
-//   color: $color-medium-text;
-//   text-decoration-color: $color-medium-text;
-//   text-decoration-thickness: 0.2em;
-//   text-underline-offset: 1.5px;
-// }
 
 a:hover {
   color: $color-accent-alt;
   text-decoration-color: $color-accent-alt;
-  text-decoration-thickness: 0.2em;
-  text-underline-offset: 1.5px;
-  transition: color $link-transition-in;
+  text-decoration-thickness: $link-underline-thickness;
+  text-underline-offset: $link-underline-offset;
+  transition: all $link-transition-in;
 }
 
-// a:active {
-//   color: $color-accent-alt;
-//   text-decoration-color: $color-accent-alt;
-//   text-decoration-thickness: 0.2em;
-//   text-underline-offset: 1.5px;
-// }
+.header-container {
+  background-color: $color-background;
+}
 
 .header {
-  background-color: $color-background;
   scroll-behavior: smooth;
   &__logo {
     text-decoration: none;
@@ -132,8 +124,9 @@ a:hover {
       font-family: $font-body;
       color: $color-strongest-text;
       text-decoration: underline 0.2em rgba(251, 34, 90, 0);
-      text-underline-offset: 1.5px;
-      transition: text-decoration-color 0.6s, color 0.6s;
+      text-decoration-thickness: $link-underline-thickness;
+      text-underline-offset: $link-underline-offset;
+      transition: all $link-transition-out;
     }
     a:visited {
       font-family: $font-body;
@@ -145,8 +138,9 @@ a:hover {
       font-family: $font-body;
       color: $color-accent-alt;
       text-decoration: underline 0.2em rgba(251, 34, 90, 1);
-      text-underline-offset: 1.5px;
-      transition: text-decoration-color 0.5s, color 0.5s;
+      text-decoration-thickness: $link-underline-thickness;
+      text-underline-offset: $link-underline-offset;
+      transition: all $link-transition-in;
     }
   }
 }
