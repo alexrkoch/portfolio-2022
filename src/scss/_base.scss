@@ -158,8 +158,11 @@ a:hover {
   }
 }
 
-.portfolio {
+.portfolio-container {
   background-color: $color-light-background;
+}
+
+.portfolio {
   &__table-of-contents {
     ul {
       list-style: outside none none;

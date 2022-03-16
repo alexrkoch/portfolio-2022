@@ -11,43 +11,38 @@ $content-max-width: 800px;
 $content-min-width: 320px;
 $content-margins: 20px;
 
-body {
-  display: grid;
-  grid-template-columns:
-    minmax($content-margins, 1fr)
-    minmax($content-min-width, $content-max-width)
-    minmax($content-margins, 1fr);
-  grid-template-rows: $navbar-height auto;
-  grid-template-areas:
-    "... header ..."
-    "... hero ..."
-    "... portfolio ..."
-    "... resume ..."
-    "... footer ...";
-}
-
-#portfolio-link,
-#resume-link {
-  margin-top: rem(-1 * ($navbar-headbutt));
-  padding-bottom: rem($navbar-headbutt);
-  display: block;
-}
-
-.header-container {
-  grid-area: 1 / 1 / 2 / 4;
-  position: sticky;
-  top: 0;
+// Mixins
+@mixin section-grid {
   display: grid;
   grid-template-columns:
     minmax($content-margins, 1fr)
     minmax($content-min-width, $content-max-width)
     minmax($content-margins, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: "... header ...";
+  grid-template-areas: "... content ...";
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: $navbar-height auto;
+  grid-template-areas:
+    "header"
+    "hero"
+    "portfolio"
+    "resume"
+    "footer";
+}
+
+.header-container {
+  grid-area: header;
+  position: sticky;
+  top: 0;
+  @include section-grid;
 }
 
 .header {
-  grid-area: header;
+  grid-area: content;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
@@ -70,15 +65,28 @@ body {
   }
 }
 
-.hero {
+#portfolio-link,
+#resume-link {
+  margin-top: rem(-1 * ($navbar-headbutt));
+  padding-bottom: rem($navbar-headbutt);
+  display: block;
+}
+
+.hero-container {
   grid-area: hero;
+  @include section-grid;
+  margin-bottom: $margin-section;
+  margin-top: $padding-primary;
+}
+
+.hero {
+  grid-area: content;
   display: grid;
   grid-template-columns: 1fr 340px;
   grid-template-rows: rem(100) auto;
   grid-template-areas:
     "header image"
     "body image";
-  margin-bottom: $margin-section;
   &__header {
     grid-area: header;
     padding-top: rem(50);
@@ -86,6 +94,7 @@ body {
   &__body {
     grid-area: body;
     padding-top: rem(50);
+    margin-right: rem(32);
     line-height: rem(25);
   }
   &__image {
@@ -96,21 +105,16 @@ body {
 }
 
 .portfolio-container {
-  grid-area: 3 / 1 / 4 / 4;
+  grid-area: portfolio;
   margin-bottom: 2000px;
+  @include section-grid;
 }
 
 .portfolio {
   padding-top: $margin-section;
-  display: grid;
-  grid-template-columns:
-    minmax($content-margins, 1fr)
-    minmax($content-min-width, $content-max-width)
-    minmax($content-margins, 1fr);
-  grid-template-rows: auto;
-  grid-template-areas:
-    "... header ..."
-    "... toc ...";
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
 
   &__header {
     grid-area: header;
@@ -131,8 +135,14 @@ body {
   }
 }
 
-.resume {
+.resume-container {
   grid-area: resume;
+  margin-bottom: 2000px;
+  @include section-grid;
+}
+
+.resume {
+  grid-area: content;
 }
 
 .footer {

@@ -120,39 +120,33 @@ a:hover {
   line-height: 3.75rem;
   font-family: "Poppins", sans-serifs;
 }
-.portfolio {
+.portfolio-container {
   background-color: #f0eff5;
 }
+
 .portfolio__table-of-contents ul {
   list-style: outside none none;
 }
 
 body {
   display: grid;
-  grid-template-columns: minmax(20px, 1fr) minmax(320px, 800px) minmax(20px, 1fr);
+  grid-template-columns: 1fr;
   grid-template-rows: 3.75rem auto;
-  grid-template-areas: "... header ..." "... hero ..." "... portfolio ..." "... resume ..." "... footer ...";
-}
-
-#portfolio-link,
-#resume-link {
-  margin-top: -5rem;
-  padding-bottom: 5rem;
-  display: block;
+  grid-template-areas: "header" "hero" "portfolio" "resume" "footer";
 }
 
 .header-container {
-  grid-area: 1/1/2/4;
+  grid-area: header;
   position: sticky;
   top: 0;
   display: grid;
   grid-template-columns: minmax(20px, 1fr) minmax(320px, 800px) minmax(20px, 1fr);
   grid-template-rows: auto;
-  grid-template-areas: "... header ...";
+  grid-template-areas: "... content ...";
 }
 
 .header {
-  grid-area: header;
+  grid-area: content;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
@@ -175,13 +169,29 @@ body {
   padding-left: 16px;
 }
 
-.hero {
+#portfolio-link,
+#resume-link {
+  margin-top: -5rem;
+  padding-bottom: 5rem;
+  display: block;
+}
+
+.hero-container {
   grid-area: hero;
+  display: grid;
+  grid-template-columns: minmax(20px, 1fr) minmax(320px, 800px) minmax(20px, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "... content ...";
+  margin-bottom: 80px;
+  margin-top: 32px;
+}
+
+.hero {
+  grid-area: content;
   display: grid;
   grid-template-columns: 1fr 340px;
   grid-template-rows: 6.25rem auto;
   grid-template-areas: "header image" "body image";
-  margin-bottom: 80px;
 }
 .hero__header {
   grid-area: header;
@@ -190,6 +200,7 @@ body {
 .hero__body {
   grid-area: body;
   padding-top: 3.125rem;
+  margin-right: 2rem;
   line-height: 1.5625rem;
 }
 .hero__image {
@@ -199,16 +210,19 @@ body {
 }
 
 .portfolio-container {
-  grid-area: 3/1/4/4;
+  grid-area: portfolio;
   margin-bottom: 2000px;
+  display: grid;
+  grid-template-columns: minmax(20px, 1fr) minmax(320px, 800px) minmax(20px, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "... content ...";
 }
 
 .portfolio {
   padding-top: 80px;
-  display: grid;
-  grid-template-columns: minmax(20px, 1fr) minmax(320px, 800px) minmax(20px, 1fr);
-  grid-template-rows: auto;
-  grid-template-areas: "... header ..." "... toc ...";
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
 }
 .portfolio__header {
   grid-area: header;
@@ -228,8 +242,17 @@ body {
   padding-bottom: 16px;
 }
 
-.resume {
+.resume-container {
   grid-area: resume;
+  margin-bottom: 2000px;
+  display: grid;
+  grid-template-columns: minmax(20px, 1fr) minmax(320px, 800px) minmax(20px, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "... content ...";
+}
+
+.resume {
+  grid-area: content;
 }
 
 .footer {
