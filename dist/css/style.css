@@ -128,9 +128,34 @@ a:hover {
   list-style: outside none none;
 }
 
+.project {
+  border: 1px #514e7c solid;
+  border-radius: 16px;
+  padding: 0px 16px;
+}
 .project span {
   padding-right: 16px;
   padding-left: 16px;
+}
+.project__header {
+  padding-bottom: 16px;
+}
+.project__links {
+  padding-bottom: 32px;
+}
+.project p {
+  padding-bottom: 16px;
+}
+.project img {
+  float: right;
+  margin-left: 32px;
+  margin-bottom: 32px;
+}
+.project .mobile-image {
+  width: 200px;
+}
+.project .desktop-image {
+  width: 400px;
 }
 
 body {

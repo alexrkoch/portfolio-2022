@@ -2,8 +2,31 @@
 
 // Portfolio Item
 .project {
+  border: 1px $color-medium-text solid;
+  border-radius: 16px;
+  padding: 0px $padding-secondary;
   span {
     padding-right: $padding-secondary;
     padding-left: $padding-secondary;
+  }
+  &__header {
+    padding-bottom: $padding-secondary;
+  }
+  &__links {
+    padding-bottom: $padding-primary;
+  }
+  p {
+    padding-bottom: $padding-secondary;
+  }
+  img {
+    float: right;
+    margin-left: $padding-primary;
+    margin-bottom: $padding-primary;
+  }
+  .mobile-image {
+    width: 200px;
+  }
+  .desktop-image {
+    width: 400px;
   }
 }
