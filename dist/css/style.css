@@ -174,8 +174,7 @@ body {
   padding-left: 16px;
 }
 
-#portfolio-link,
-#resume-link {
+.link {
   margin-top: -5rem;
   padding-bottom: 5rem;
   display: block;
@@ -230,14 +229,12 @@ body {
   flex-direction: column;
 }
 .portfolio__header {
-  grid-area: header;
   padding-bottom: 32px;
 }
 .portfolio__table-of-contents {
-  grid-area: toc;
+  padding-bottom: 32px;
 }
 .portfolio__table-of-contents h3 {
-  color: #514e7c;
   padding-bottom: 16px;
 }
 .portfolio__table-of-contents ul {

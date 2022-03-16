@@ -44,8 +44,7 @@ body {
   }
 }
 
-#portfolio-link,
-#resume-link {
+.link {
   margin-top: rem(-1 * ($navbar-headbutt));
   padding-bottom: rem($navbar-headbutt);
   display: block;
@@ -96,13 +95,11 @@ body {
   flex-direction: column;
 
   &__header {
-    grid-area: header;
     padding-bottom: $padding-primary;
   }
   &__table-of-contents {
-    grid-area: toc;
+    padding-bottom: $padding-primary;
     h3 {
-      color: $color-medium-text;
       padding-bottom: $padding-secondary;
     }
     ul {
