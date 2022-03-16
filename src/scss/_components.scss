@@ -1,1 +1,9 @@
-// anything that is reusable; buttons, cards, etc.
+@import "./variables_mixins_functions";
+
+// Portfolio Item
+.project {
+  span {
+    padding-right: $padding-secondary;
+    padding-left: $padding-secondary;
+  }
+}

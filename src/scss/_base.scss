@@ -1,10 +1,7 @@
-// Functions
-@use "sass:math";
-@function rem($pixels) {
-  @return math.div($pixels, 16) + rem;
-}
-
 // Normalize and Reset
+
+@import "./variables_mixins_functions";
+
 *,
 *::before,
 *::after {
@@ -12,28 +9,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-// Color Palette
-$color-accent: #4d3efe;
-$color-accent-alt: #fb225a;
-$color-strongest-text: #030137;
-$color-strong-text: #032074;
-$color-medium-text: #514e7c;
-$color-subtle-text: #66669a;
-$color-borders: #66669a;
-$color-background: #deddeb;
-$color-light-background: #f0eff5;
-$color-near-white: #f8f9fb;
-
-// Typography
-$font-header: "Poppins", sans-serifs;
-$font-body: "Work Sans", sans-serifs;
-$link-underline-thickness: 0.25em;
-$link-underline-offset: 2px;
-
-// Animation
-$link-transition-in: 0.3s;
-$link-transition-out: 0.5s;
 
 // Colors
 body {

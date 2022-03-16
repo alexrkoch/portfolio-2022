@@ -1,0 +1,49 @@
+// Functions
+@use "sass:math";
+@function rem($pixels) {
+  @return math.div($pixels, 16) + rem;
+}
+
+// Layout
+$margin-section: 80px;
+$padding-primary: 32px;
+$padding-secondary: 16px;
+$padding-tiny: 8px;
+$navbar-height: rem(60);
+$navbar-headbutt: 80; // compare to navbar-height above (no px!)
+$content-max-width: 800px;
+$content-min-width: 320px;
+$content-margins: 20px;
+
+// Color Palette
+$color-accent: #4d3efe;
+$color-accent-alt: #fb225a;
+$color-strongest-text: #030137;
+$color-strong-text: #032074;
+$color-medium-text: #514e7c;
+$color-subtle-text: #66669a;
+$color-borders: #66669a;
+$color-background: #deddeb;
+$color-light-background: #f0eff5;
+$color-near-white: #f8f9fb;
+
+// Typography
+$font-header: "Poppins", sans-serifs;
+$font-body: "Work Sans", sans-serifs;
+$link-underline-thickness: 0.25em;
+$link-underline-offset: 2px;
+
+// Animation
+$link-transition-in: 0.3s;
+$link-transition-out: 0.5s;
+
+// Mixins
+@mixin section-grid {
+  display: grid;
+  grid-template-columns:
+    minmax($content-margins, 1fr)
+    minmax($content-min-width, $content-max-width)
+    minmax($content-margins, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "... content ...";
+}

@@ -1,26 +1,5 @@
 // contains page structure, containers and grid system
-
-// Variables
-$margin-section: 80px;
-$padding-primary: 32px;
-$padding-secondary: 16px;
-$padding-tiny: 8px;
-$navbar-height: rem(60);
-$navbar-headbutt: 80; // compare to navbar-height above (no px!)
-$content-max-width: 800px;
-$content-min-width: 320px;
-$content-margins: 20px;
-
-// Mixins
-@mixin section-grid {
-  display: grid;
-  grid-template-columns:
-    minmax($content-margins, 1fr)
-    minmax($content-min-width, $content-max-width)
-    minmax($content-margins, 1fr);
-  grid-template-rows: auto;
-  grid-template-areas: "... content ...";
-}
+@import "./variables_mixins_functions";
 
 body {
   display: grid;
