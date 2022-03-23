@@ -88,16 +88,15 @@ body {
 }
 
 .portfolio {
+  margin-bottom: $margin-section;
   padding-top: $margin-section;
   grid-area: content;
-  display: flex;
-  flex-direction: column;
 
   &__header {
     padding-bottom: $padding-primary;
   }
   &__table-of-contents {
-    padding-bottom: $padding-primary;
+    padding-bottom: $padding-block;
     h3 {
       padding-bottom: $padding-secondary;
     }
@@ -110,6 +109,37 @@ body {
   }
 }
 
+// Portfolio Item
+.project {
+  padding: 0px $padding-secondary;
+  margin-bottom: $padding-block;
+
+  span {
+    padding-right: $padding-secondary;
+    padding-left: $padding-secondary;
+  }
+  &__header {
+    padding-bottom: $padding-secondary;
+  }
+  &__links {
+    padding-bottom: $padding-primary;
+  }
+  p {
+    padding-bottom: $padding-secondary;
+  }
+  img {
+    float: right;
+    margin-left: $padding-primary;
+    margin-bottom: $padding-primary;
+  }
+  .mobile-image {
+    width: 200px;
+  }
+  .desktop-image {
+    width: 400px;
+  }
+}
+
 .resume-container {
   grid-area: resume;
   margin-bottom: 2000px;
@@ -117,7 +147,24 @@ body {
 }
 
 .resume {
+  margin-bottom: $margin-section;
+  padding-top: $margin-section;
   grid-area: content;
+  h2 {
+    padding-bottom: $padding-block;
+  }
+}
+
+.resume-item {
+  margin-bottom: $padding-primary;
+  &__headline {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $padding-tiny;
+  }
+
+  &__description {
+  }
 }
 
 .footer {

@@ -151,3 +151,15 @@ a:hover {
     }
   }
 }
+
+// Portfolio Item
+.project {
+  border: 1px $color-medium-text solid;
+  border-radius: 16px;
+}
+
+.resume-item {
+  &__subtitle {
+    font-size: rem(14);
+  }
+}
