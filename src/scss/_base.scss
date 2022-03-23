@@ -37,6 +37,13 @@ a {
   transition: all $link-transition-out;
 }
 
+a.inline-link {
+  font-family: $font-body;
+  color: $color-medium-text;
+  text-decoration: none;
+  transition: all $link-transition-out;
+}
+
 a:hover {
   color: $color-accent-alt;
   text-decoration-color: $color-accent-alt;

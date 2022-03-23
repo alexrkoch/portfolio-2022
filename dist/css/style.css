@@ -32,6 +32,13 @@ a {
   transition: all 0.5s;
 }
 
+a.inline-link {
+  font-family: "Work Sans", sans-serifs;
+  color: #514e7c;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
 a:hover {
   color: #fb225a;
   text-decoration-color: #fb225a;
@@ -132,6 +139,7 @@ a:hover {
   border: 1px #514e7c solid;
   border-radius: 16px;
   padding: 0px 16px;
+  margin-bottom: 32px;
 }
 .project span {
   padding-right: 16px;
@@ -240,7 +248,6 @@ body {
 
 .portfolio-container {
   grid-area: portfolio;
-  margin-bottom: 2000px;
   display: grid;
   grid-template-columns: minmax(20px, 1fr) minmax(320px, 800px) minmax(20px, 1fr);
   grid-template-rows: auto;
