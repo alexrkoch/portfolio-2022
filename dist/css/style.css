@@ -127,7 +127,7 @@ a:hover {
   line-height: 3.75rem;
   font-family: "Poppins", sans-serifs;
 }
-.portfolio-container {
+.resume-container {
   background-color: #f0eff5;
 }
 
@@ -148,7 +148,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 3.75rem auto;
-  grid-template-areas: "header" "hero" "portfolio" "resume" "footer";
+  grid-template-areas: "header" "hero" "resume" "portfolio" "footer";
 }
 
 .header-container {
@@ -226,6 +226,7 @@ body {
 
 .portfolio-container {
   grid-area: portfolio;
+  margin-bottom: 2000px;
   display: grid;
   grid-template-columns: minmax(20px, 1fr) minmax(320px, 800px) minmax(20px, 1fr);
   grid-template-rows: auto;
@@ -281,7 +282,7 @@ body {
 
 .resume-container {
   grid-area: resume;
-  margin-bottom: 2000px;
+  margin-bottom: 80px;
   display: grid;
   grid-template-columns: minmax(20px, 1fr) minmax(320px, 800px) minmax(20px, 1fr);
   grid-template-rows: auto;

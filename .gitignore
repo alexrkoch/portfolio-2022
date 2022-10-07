@@ -6,3 +6,5 @@
 sass-watch-command.txt
 
 /.vscode
+
+.DS_Store
