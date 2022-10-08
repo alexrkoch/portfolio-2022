@@ -82,6 +82,41 @@ body {
   }
 }
 
+.resume-container {
+  grid-area: resume;
+  margin-bottom: $margin-section;
+  @include section-grid;
+}
+
+.resume {
+  margin-bottom: $margin-section;
+  padding-top: $margin-section;
+  grid-area: content;
+  h2 {
+    padding-bottom: $padding-block;
+  }
+}
+
+.resume-item {
+  margin-bottom: $padding-primary;
+  &__headline {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__description {
+    padding-top: $padding-tiny;
+  }
+
+  &__list {
+    padding-left: $padding-primary;
+  }
+
+  &__list-item {
+    padding-top: $padding-tiny;
+  }
+}
+
 .portfolio-container {
   grid-area: portfolio;
   margin-bottom: 2000px;
@@ -138,41 +173,6 @@ body {
   }
   .desktop-image {
     width: 400px;
-  }
-}
-
-.resume-container {
-  grid-area: resume;
-  margin-bottom: $margin-section;
-  @include section-grid;
-}
-
-.resume {
-  margin-bottom: $margin-section;
-  padding-top: $margin-section;
-  grid-area: content;
-  h2 {
-    padding-bottom: $padding-block;
-  }
-}
-
-.resume-item {
-  margin-bottom: $padding-primary;
-  &__headline {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  &__description {
-    padding-top: $padding-tiny;
-  }
-
-  &__list {
-    padding-left: $padding-primary;
-  }
-
-  &__list-item {
-    padding-top: $padding-tiny;
   }
 }
 
