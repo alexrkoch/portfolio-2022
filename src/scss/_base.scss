@@ -24,7 +24,8 @@ h5 {
   font-family: $font-header;
 }
 
-p, li {
+p,
+li {
   font-family: $font-body;
 }
 
@@ -35,6 +36,7 @@ a {
   text-decoration-thickness: $link-underline-thickness;
   text-underline-offset: $link-underline-offset;
   transition: all $link-transition-out;
+  text-decoration-skip-ink: none;
 }
 
 a.inline-link {
