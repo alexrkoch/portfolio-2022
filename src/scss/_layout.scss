@@ -161,10 +161,18 @@ body {
   &__headline {
     display: flex;
     justify-content: space-between;
-    margin-bottom: $padding-tiny;
   }
 
   &__description {
+    padding-top: $padding-tiny;
+  }
+
+  &__list {
+    padding-left: $padding-primary;
+  }
+
+  &__list-item {
+    padding-top: $padding-tiny;
   }
 }
 

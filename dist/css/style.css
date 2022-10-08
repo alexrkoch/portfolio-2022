@@ -19,7 +19,7 @@ h5 {
   font-family: "Poppins", sans-serifs;
 }
 
-p {
+p, li {
   font-family: "Work Sans", sans-serifs;
 }
 
@@ -304,8 +304,17 @@ body {
 .resume-item__headline {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 8px;
 }
+.resume-item__description {
+  padding-top: 8px;
+}
+.resume-item__list {
+  padding-left: 32px;
+}
+.resume-item__list-item {
+  padding-top: 8px;
+}
+
 .footer {
   grid-area: footer;
 }
