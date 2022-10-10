@@ -228,7 +228,6 @@ body {
 
 .resume-container {
   grid-area: resume;
-  margin-bottom: 80px;
   display: grid;
   grid-template-columns: minmax(20px, 1fr) minmax(320px, 800px) minmax(20px, 1fr);
   grid-template-rows: auto;

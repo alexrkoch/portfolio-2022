@@ -84,7 +84,7 @@ body {
 
 .resume-container {
   grid-area: resume;
-  margin-bottom: $margin-section;
+  // margin-bottom: $margin-section;
   @include section-grid;
 }
 
