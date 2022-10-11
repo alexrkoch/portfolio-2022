@@ -84,7 +84,6 @@ body {
 
 .resume-container {
   grid-area: resume;
-  // margin-bottom: $margin-section;
   @include section-grid;
 }
 
@@ -119,7 +118,7 @@ body {
 
 .portfolio-container {
   grid-area: portfolio;
-  margin-bottom: 2000px;
+  margin-bottom: 500px;
   @include section-grid;
 }
 
@@ -162,6 +161,13 @@ body {
   }
   p {
     padding-bottom: $padding-secondary;
+  }
+  ul {
+    padding-left: $padding-secondary;
+    padding-bottom: $padding-secondary;
+  }
+  li {
+    padding-bottom: $padding-tiny;
   }
   img {
     float: right;

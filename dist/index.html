@@ -218,24 +218,31 @@
         <div class="portfolio__table-of-contents">
           <h3>Contents</h3>
           <ul>
-            <li><a href="#task-link">Process Manager - React & Java</a></li>
+            <li><a href="#task-link">Task Tracker - React & Java</a></li>
             <li><a href="#reels-link">Reels Movie Search - Vanilla JS</a></li>
             <li>
               <a href="#portfolio-project-link"
                 >This Portfolio Website - HTML & SCSS</a
               >
             </li>
-            <li><a href="#moose-link">Moose Club Responsive Website - HTML & SCSS</a></li>
+            <li>
+              <a href="#moose-link"
+                >Moose Club Responsive Website - HTML & SCSS</a
+              >
+            </li>
             <li><a href="#water-link">Groundwater Calculator - Python</a></li>
             <li><a href="#love-link">Love Island Data Collection - PHP</a></li>
             <li>
-              <a href="#coalition-link"
-                >Local Activist Group - WordPress</a
+              <a href="#coalition-link">Local Activist Group - WordPress</a>
+            </li>
+            <li>
+              <a href="#aaa-site-link"
+                >Nonprofit Org - WordPress with Ecommerce</a
               >
             </li>
             <li>
-              <a href="#aaa-link"
-                >Nonprofit Org - WordPress with Ecommerce</a
+              <a href="#anti-debt-link"
+                >The Anti Debt Agenda Blog - WordPress</a
               >
             </li>
           </ul>
@@ -287,7 +294,7 @@
               alt="A screenshot of the movie app after searching for Star Wars."
             />
           </div>
-          <h3 class="project__header">Reels - Movie Search App</h3>
+          <h3 class="project__header">Reels Movie Search - Vanilla JS</h3>
           <div class="project__links">
             <a target="_blank" href="http://reels-movie-app.herokuapp.com/"
               >Live App</a
@@ -332,7 +339,9 @@
           </div>
           <h3 class="project__header">R&eacutesum&eacute and Portfolio Site</h3>
           <div class="project__links">
-            <a target="_blank" href="https://github.com/alexrkoch"
+            <a
+              target="_blank"
+              href="https://github.com/alexrkoch/portfolio-2022"
               >Github Repository</a
             >
           </div>
@@ -346,21 +355,21 @@
           <p>
             <strong>Action: </strong>Create a simple, lightweight static web
             page with basic technologies. I used SCSS for a maintainable and
-            symanic styling system. I also designed this page with some (i
+            symanic styling system. I also designed this page with some (I
             think) elegant and modern colors, font, and link transitions. I
             followed basic design best practices for spacing, padding, margin,
             etc. The site is not currently mobile responsive, but its on my
             to-do when I have some time.
           </p>
           <p>
-            <strong>Result: </strong>You tell me, is it a good site?? I think
-            its fit for purpose, and doing what I want it to. Its fun to get
-            back to basics while maintaining the site, and its accessible to
-            anyone considering me for a job.
+            <strong>Result: </strong>You tell me, do you like this site? It's
+            the one you're on right NOW! I think its fit for purpose, and doing
+            what I want it to. It's fun to get back to basics while maintaining
+            the site, and its accessible to anyone considering me for a job.
           </p>
           <p>
-            <strong>Tech: </strong>HTML, CSS (css grid, flex box, BEM, SCSS:
-            mixins, functions, variables), git, simple hosting on A2.
+            <strong>Tech: </strong>HTML, CSS (css grid, flex box, BEM), SCSS
+            (mixins, functions, variables), git, simple hosting on A2.
           </p>
         </div>
         <div class="project moose">
@@ -423,11 +432,32 @@
               >Github Repository</a
             >
           </div>
-          <p><strong>Problem: </strong>I was applying to a job that was a geoscience-focused developer job. The owner of the firm let me know that they worked heavily with Python, CI/CD, and Docker. I had plenty of Python experience, but had never worked with CI/CD and Docker. </p>
-          <p><strong>Action: </strong> I conceived a fake groundwater flow direction problem to flex my geoscience knowledge, while giving me a chance to develop the new skillsets needed for the job interview. I created a docker image that would run my Python tool in the command line and calculate the groundwater flow direction based on input measurements. I set up a CICD pipeline using Github Actions, which would build my docker image, run my unit tests, and if all was successful push the updated image to Docker Hub.</p>
-          <p><strong>Result: </strong>I created a functional command line tool which calculates groundwater flow direction from 3 points of data. I got great feedback on this project during the interview, but unfortunately didn't get the position (cest la vie!)</p>
           <p>
-            <strong>Tech: </strong>Python, Pytest (Unit Tests), CICD: Github Actions & Docker Hub.
+            <strong>Problem: </strong>I was applying to a job that was a
+            geoscience-focused developer job. The owner of the firm let me know
+            that they worked heavily with Python, CI/CD, and Docker. I had
+            plenty of Python experience, but had never worked with CI/CD and
+            Docker.
+          </p>
+          <p>
+            <strong>Action: </strong> I conceived a fake groundwater flow
+            direction problem to flex my geoscience knowledge, while giving me a
+            chance to develop the new skillsets needed for the job interview. I
+            created a docker image that would run my Python tool in the command
+            line and calculate the groundwater flow direction based on input
+            measurements. I set up a CICD pipeline using Github Actions, which
+            would build my docker image, run my unit tests, and if all was
+            successful push the updated image to Docker Hub.
+          </p>
+          <p>
+            <strong>Result: </strong>I created a functional command line tool
+            which calculates groundwater flow direction from 3 points of data. I
+            got great feedback on this project during the interview, but
+            unfortunately didn't get the position (cest la vie!)
+          </p>
+          <p>
+            <strong>Tech: </strong>Python, Pytest (Unit Tests), CICD: Github
+            Actions & Docker Hub.
           </p>
         </div>
         <div class="project love-island">
@@ -441,8 +471,8 @@
           </div>
           <h3 class="project__header">Love Island Data Collection App</h3>
           <div class="project__links">
-            <a target="_blank" href="https://loveislandstats.com/">Live Site</a
-            ><span> | </span>
+            <!-- <a target="_blank" href="https://loveislandstats.com/">Live Site</a
+            ><span> | </span> -->
             <a
               target="_blank"
               href="https://github.com/alexrkoch/love-island-stats"
@@ -484,6 +514,134 @@
           <p>
             <strong>Tech: </strong>WordPress, HTML, CSS, Bootstrap, PHP, mySQL,
             UI/UX Design, Bluehost.
+          </p>
+        </div>
+        <div class="project coalition">
+          <span class="link" id="coalition-link"> &nbsp;</span>
+          <div>
+            <img
+              class="desktop-image"
+              src="../assets/wchjc-screenshot.png"
+              alt="A screenshot of the Wake County Housing Justice Coalition home page."
+            />
+          </div>
+          <h3 class="project__header">
+            Local Activist Group Website - WordPress
+          </h3>
+          <div class="project__links">
+            <a target="_blank" href="https://wakehousingjustice.org/"
+              >Live Site</a
+            >
+          </div>
+          <p>
+            <strong>Problem: </strong> The Wake County Housing Justice
+            Coalition, a local housing activist group that I have done some work
+            with, needed a website to share information about their
+            organization, write blog posts, take contacts from the community,
+            manage upcoming events and volunteer registration, and display a
+            twitter stream in the side bar. They had no major requirements on
+            design but asked for something simple that aligned with their color
+            theme.
+          </p>
+          <p>
+            <strong>Action: </strong> I created a WordPress website for them
+            using a Bootstrap-based theme. I customized the theme to fit their
+            needs, and added an events plugin to help with the volunteer
+            registration and event management, which required a bit of PHP
+            customization. I also re-worked their logo to be more web-friendly.
+            I set them up with their own Bluehost account and launched the
+            website for them..
+          </p>
+          <p>
+            <strong>Result: </strong> I created the project within budget and
+            met all requirements. The group was happy with their site and use it
+            to engage with their community.
+          </p>
+          <p>
+            <strong>Tech: </strong>WordPress, HTML, CSS, Bootstrap, PHP, UI/UX
+            Design, Bluehost, CPanel.
+          </p>
+        </div>
+        <div class="project aaa">
+          <span class="link" id="aaa-site-link"> &nbsp;</span>
+          <div>
+            <img
+              class="desktop-image"
+              src="../assets/aaa-screenshot.png"
+              alt="A screenshot of the AAA meeting registration form page that I worked on."
+            />
+          </div>
+          <h3 class="project__header">
+            Nonprofit Org - WordPress with Ecommerce
+          </h3>
+          <div class="project__links">
+            <a target="_blank" href="https://alladdictsanonymous.org/"
+              >Live Site</a
+            >
+          </div>
+          <ul>
+            <li>
+              All Addicts Anonymous needed a WordPress developer to take care of
+              some regular updates, and also re-build some pieces of their site.
+            </li>
+            <li>
+              Implemented WooCommerce for their site to replace their store
+              which used paypal-buttons exclusively. Started setting them up for
+              further automation with their printer by leveraging automated
+              emails through Woo.
+            </li>
+            <li>
+              Refactored an existing static form into a dynamic form for
+              meeeting registrations, and improved accessibility of the form
+              labels.
+            </li>
+            <li>
+              Set up a staging site so the client could see changes I was making
+              in development before pushing to the live site. This was a major
+              challenge considering the technical limitations of their site
+              being hosted on wordpress.com (as opposed to a self-hosted
+              WordPress solution)
+            </li>
+            <li>
+              Set up a way for the organization to store their resource PDFs on
+              the by category.
+            </li>
+          </ul>
+          <p>
+            <strong>Tech: </strong>WordPress, HTML, CSS, PHP, UI/UX Design,
+            WooCommerce, Paypal API, .
+          </p>
+        </div>
+        <div class="project anti-debt">
+          <span class="link" id="anti-debt-link"> &nbsp;</span>
+          <div>
+            <img
+              class="desktop-image"
+              src="../assets/anti-debt-screenshot.png"
+              alt="A screenshot of the Anti Debt Agenda home page."
+            />
+          </div>
+          <h3 class="project__header">
+            The Anti Debt Agenda Blog - WordPress
+          </h3>
+          <div class="project__links">
+            <a target="_blank" href="https://theantidebtagenda.com/"
+              >Live Site</a
+            >
+          </div>
+          <p>
+            <strong>Problem: </strong> The client, Bob, wanted a website to share his blog posts about his political interests in the ongoing debt crisis in the US. He wanted a simple, clean design that was easy to read and navigate. Bob is not comfortable with technology, so he needed a developer who could take care of the technical aspects of the site and make it easy for him to update. The features he wanted were all the core blog features: home page with an intro and recent posts, categories, a list of links to other blogs, and an email registration for his readers to recieve new blog posts.
+          </p>
+          <p>
+            <strong>Action: </strong> I created a WordPress website for bob using a simple and flexible theme. I customized the theme to fit his needs, and added a plugin to help with the email registration. I set him up with his own Bluehost account and launched the website for him.
+          </p>
+          <p>
+            <strong>Result: </strong> I created the project within budget and
+            met all requirements. Bob was happy with his site and posts periodically with informative articles.
+          </p>
+          <p>
+            <strong>Tech: </strong>WordPress, HTML, CSS, UI/UX
+            Design, Bluehost, CPanel.
           </p>
         </div>
       </div>

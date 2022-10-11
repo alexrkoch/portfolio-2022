@@ -262,7 +262,7 @@ body {
 
 .portfolio-container {
   grid-area: portfolio;
-  margin-bottom: 2000px;
+  margin-bottom: 500px;
   display: grid;
   grid-template-columns: minmax(20px, 1fr) minmax(320px, 800px) minmax(20px, 1fr);
   grid-template-rows: auto;
@@ -303,6 +303,13 @@ body {
 }
 .project p {
   padding-bottom: 16px;
+}
+.project ul {
+  padding-left: 16px;
+  padding-bottom: 16px;
+}
+.project li {
+  padding-bottom: 8px;
 }
 .project img {
   float: right;
