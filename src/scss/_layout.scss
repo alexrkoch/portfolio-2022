@@ -27,21 +27,27 @@ body {
   grid-template-rows: auto;
   grid-template-areas: "logo socials navigation";
   align-items: center;
+
   &__logo {
     grid-area: logo;
   }
+
   &__socials {
     grid-area: socials;
+
     a {
       padding-left: $padding-tiny;
     }
   }
+
   &__navigation {
     grid-area: navigation;
+
     a:link {
       padding-left: $padding-secondary;
     }
   }
+
   &__mobile {
     display: none;
   }
@@ -49,50 +55,64 @@ body {
 
 @media screen and (max-width: $breakpoint) {
   .header {
-    grid-template-columns: 1fr 0.5fr;
-    grid-template-areas: "logo hamburger";
+    display: flex;
     justify-content: space-between;
+    align-items: start;
+    margin-top: 0.8rem;
+
     &__socials,
     &__navigation {
       display: none;
     }
-    &__logo {
-      grid-area: logo;
-    }
+
+    &__logo {}
+
     &__mobile {
+      display: flex;
+      grid-area: hamburger;
+      align-items: end;
+      flex-direction: column;
+    }
+
+    &__mobile--hamburger {
+      display: inline-block;
+      cursor: pointer;
+      background-color: transparent;
+      border: none !important;
+      padding: 0;
+    }
+
+    &__mobile--hamburger-line {
       display: block;
-      grid-area: hamburger
-      &--hamburger {
-        display: inline-block;
-        cursor: pointer;
-        background-color: transparent;
-        border: none;
+      width: 25px;
+      height: 3px;
+      background-color: black;
+      margin: 4px 0;
+    }
+
+    &__mobile--menu {
+      display: none;
+      background-color: $color-background;
+      padding: $padding-tiny;
+      border-radius: 3%;
+
+      ul {
+        list-style-type: none;
         padding: 0;
       }
-      &--hamburger-line {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background-color: black;
-        margin: 4px 0;
+
+      li {
+        margin: 10px 0;
       }
-      &--menu {
-        display: none;
-        ul {
-          list-style-type: none;
-          padding: 0;
-        }
-        li {
-          margin: 10px 0;
-        }
-        a {
-          color: #fff;
-          text-decoration: none;
-        }
+
+      a {
+        text-decoration: none;
       }
-      &--menu-visible {
-        display: block;
-      }
+    }
+
+    &__mobile--menu-visible {
+      display: flex;
+      align-items: end;
     }
   }
 }
@@ -118,16 +138,19 @@ body {
   grid-template-areas:
     "header image"
     "body image";
+
   &__header {
     grid-area: header;
     padding-top: rem(50);
   }
+
   &__body {
     grid-area: body;
     padding-top: rem(50);
     margin-right: rem(32);
     line-height: rem(25);
   }
+
   &__image {
     grid-area: image;
     width: 340px;
@@ -155,6 +178,7 @@ body {
   margin-bottom: $margin-section;
   padding-top: $margin-section;
   grid-area: content;
+
   h2 {
     padding-bottom: $padding-block;
   }
@@ -162,6 +186,7 @@ body {
 
 .resume-item {
   margin-bottom: $padding-primary;
+
   &__headline {
     display: flex;
     justify-content: space-between;
@@ -202,14 +227,18 @@ body {
   &__header {
     padding-bottom: $padding-primary;
   }
+
   &__table-of-contents {
     padding-bottom: $padding-block;
+
     h3 {
       padding-bottom: $padding-secondary;
     }
+
     ul {
       // padding-left: $padding-primary;
     }
+
     li {
       padding-bottom: $padding-secondary;
     }
@@ -225,35 +254,44 @@ body {
     padding-right: $padding-secondary;
     padding-left: $padding-secondary;
   }
+
   &__header {
     padding-bottom: $padding-secondary;
   }
+
   &__links {
     padding-bottom: $padding-primary;
   }
+
   p {
     padding-bottom: $padding-secondary;
   }
+
   ul {
     padding-left: $padding-secondary;
     padding-bottom: $padding-secondary;
   }
+
   li {
     padding-bottom: $padding-tiny;
   }
+
   img {
     float: right;
     margin-left: $padding-primary;
     margin-bottom: $padding-primary;
   }
+
   .mobile-image {
     width: 200px;
   }
+
   .desktop-image {
     width: 400px;
   }
 
   @media screen and (max-width: $breakpoint) {
+
     .mobile-image,
     .desktop-image {
       display: none;
