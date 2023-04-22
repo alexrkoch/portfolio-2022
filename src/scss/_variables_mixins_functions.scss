@@ -38,6 +38,8 @@ $link-underline-offset: 2px;
 $link-transition-in: 0.3s;
 $link-transition-out: 0.5s;
 
+$breakpoint: 480px;
+
 // Mixins
 @mixin section-grid {
   display: grid;
