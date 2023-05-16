@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no">
   <title>Alex Koch - Software Developer</title>
   <link href="css/style.css" type="text/css" rel="stylesheet" />
   <link rel="icon"
@@ -87,7 +88,7 @@
       <div class="resume-item optum">
         <div class="resume-item__headline">
           <h3>Associate Software Engineer, Optum (Contractor)</h3>
-          <h4>08/2022 - Present</h4>
+          <pre><h4>08/2022 - Present</h4></pre>
         </div>
         <ul class="resume-item__list">
           <li class="resume-item__list-item">
@@ -120,12 +121,9 @@
             orchestrate back-end processes.
           </li>
           <li class="resume-item__list-item">
-            Practiced reactive programming paradigm for the full stack: RxJS in
-            Angular, and Project Reactor for Java.
-          </li>
-          <li class="resume-item__list-item">
-            Quickly learned new technologies and frameworks to start
-            contributing early in my contract.
+            Practiced reactive programming paradigm for the full stack: strong
+            skills in RxJS in
+            Angular, and exposure to Project Reactor for Java.
           </li>
           <li class="resume-item__list-item">
             Contributed to improving onboarding process and documentation for
@@ -187,7 +185,9 @@
           </li>
           <li class="resume-item__list-item">
             <strong>Related Portfolio Items:</strong>
-            add anchor links to portfolio items
+            <a href="#aaa-site-link">AAA Non profit</a> |
+            <a href="#coalition-link">Local Activist Group</a> |
+            <a href="#anti-debt-link">Political Blog</a>
           </li>
         </ul>
       </div>
@@ -260,6 +260,7 @@
       <div class="portfolio__table-of-contents">
         <h3>Contents</h3>
         <ul>
+          <li><a href="#tic-link">Tic Tac Toe - React & Websockets</a></li>
           <li><a href="#task-link">Task Tracker - React & Java</a></li>
           <li><a href="#reels-link">Reels Movie Search - Vanilla JS</a></li>
           <li>
@@ -283,6 +284,31 @@
             <a href="#anti-debt-link">The Anti Debt Agenda Blog - WordPress</a>
           </li>
         </ul>
+      </div>
+      <div class="project tic">
+        <span class="link" id="tic-link"> &nbsp;</span>
+        <div>
+          <img class="desktop-image" src="../assets/tic-tac-toe-screenshot.webp"
+            alt="A screenshot of X readying to defeat O in a dramatic game of tic tac toe." />
+        </div>
+        <h3 class="project__header">Tic Tac Toe - React and Websockets</h3>
+        <div class="project__links">
+          <a target="_blank"
+            href="https://github.com/alexrkoch/react-tic-tac-toe">Github
+            Repository</a>
+        </div>
+        <p>
+          <strong>Description: </strong> This is a 2-player tic tac toe game. First, the players choose whether they will be X or O. Then they alternate turns, with each move being emitted back to a Websocket Server, which shares the move with the opponent, creating a real-time playing experience. The game notifies both players when someone has won, and allows them to start a new game if desired.
+        </p>
+        <p>
+          I developed this to dust off my knowledge of React-Redux, as I've been working exclusively with Angular for a while. I also wanted to learn more about Websockets and Node servers. The app has plenty of rough edges, as I was mostly just coding for the happy path to get some practice.
+        </p>
+        <p>
+          <strong>Front End Tech: </strong> React, Redux, Typescript
+        </p>
+        <p>
+          <strong>Back End Tech: </strong>Node, Socket.io, Express, Typescript
+        </p>
       </div>
       <div class="project task">
         <span class="link" id="task-link"> &nbsp;</span>
@@ -398,7 +424,7 @@
       <div class="project moose">
         <span class="link" id="moose-link"> &nbsp;</span>
         <div>
-          <img class="desktop-image" src="../assets/moose-club-screen-shot.jpg"
+          <img class="desktop-image" src="../assets/moose-club-screen-shot.webp"
             alt="A screenshot of the Moose Club website hero banner." />
         </div>
         <h3 class="project__header">Moose Club Responsive Website</h3>
