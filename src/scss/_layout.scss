@@ -8,8 +8,8 @@ body {
   grid-template-areas:
     "header"
     "hero"
-    "resume"
     "portfolio"
+    "resume"
     "footer";
 }
 
@@ -215,7 +215,7 @@ body {
 
 .portfolio-container {
   grid-area: portfolio;
-  margin-bottom: 500px;
+  // margin-bottom: 500px;
   @include section-grid;
 }
 

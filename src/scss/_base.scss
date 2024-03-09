@@ -60,8 +60,10 @@ a:hover {
 
 .header {
   scroll-behavior: smooth;
+
   &__logo {
     text-decoration: none;
+
     p {
       font-family: $font-header;
       font-size: rem(24);
@@ -70,40 +72,49 @@ a:hover {
       text-decoration: none;
       transition: color $link-transition-out;
     }
+
     p:hover {
       color: $color-accent-alt;
       transition: color $link-transition-in;
     }
   }
+
   &__socials {
     margin: 0 auto;
+
     a:link {
       font-family: $font-body;
       color: $color-strongest-text;
       text-decoration: none;
       // transition: 0.6s;
     }
+
     a:visited {
       font-family: $font-body;
       color: $color-strongest-text;
     }
+
     a:hover,
     a:active {
       font-family: $font-body;
       color: $color-accent-alt;
       transition: $link-transition-in;
     }
+
     svg {
       fill: $color-strongest-text;
       transition: $link-transition-out;
     }
+
     svg:hover {
       fill: $color-accent-alt;
       transition: $link-transition-in;
     }
   }
+
   &__navigation {
     text-align: right;
+
     a:link {
       font-family: $font-body;
       color: $color-strongest-text;
@@ -112,11 +123,13 @@ a:hover {
       text-underline-offset: $link-underline-offset;
       transition: all $link-transition-out;
     }
+
     a:visited {
       font-family: $font-body;
       color: $color-strongest-text;
       text-decoration: none;
     }
+
     a:hover,
     a:active {
       font-family: $font-body;
@@ -142,7 +155,7 @@ a:hover {
   }
 }
 
-.resume-container {
+.portfolio-container {
   background-color: $color-light-background;
 }
 
