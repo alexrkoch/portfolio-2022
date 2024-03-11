@@ -155,7 +155,7 @@ a:hover {
   }
 }
 
-.portfolio-container {
+.resume-container {
   background-color: $color-light-background;
 }
 
@@ -169,8 +169,11 @@ a:hover {
 
 // Portfolio Item
 .project {
-  border: 1px $color-medium-text solid;
+  // border: 1px $color-medium-text solid;
   border-radius: 16px;
+  background-color: $color-light-background;
+  border: $color-strong-text 3px dashed;
+  box-shadow: 8px 8px $color-box-shadow;
 }
 
 .resume-item {

@@ -1,7 +1,8 @@
 // Functions
 @use "sass:math";
+
 @function rem($pixels) {
-  @return math.div($pixels, 16) + rem;
+  @return math.div($pixels, 16)+rem;
 }
 
 // Layout
@@ -27,6 +28,7 @@ $color-borders: #66669a;
 $color-background: #deddeb;
 $color-light-background: #f0eff5;
 $color-near-white: #f8f9fb;
+$color-box-shadow: #a5a5d7;
 
 // Typography
 $font-header: "Poppins", sans-serifs;
@@ -44,9 +46,7 @@ $breakpoint: 480px;
 @mixin section-grid {
   display: grid;
   grid-template-columns:
-    minmax($content-margins, 1fr)
-    minmax($content-min-width, $content-max-width)
-    minmax($content-margins, 1fr);
+    minmax($content-margins, 1fr) minmax($content-min-width, $content-max-width) minmax($content-margins, 1fr);
   grid-template-rows: auto;
   grid-template-areas: "... content ...";
 }

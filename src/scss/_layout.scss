@@ -2,303 +2,305 @@
 @import "./variables_mixins_functions";
 
 body {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: $navbar-height auto;
-  grid-template-areas:
-    "header"
-    "hero"
-    "portfolio"
-    "resume"
-    "footer";
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: $navbar-height auto;
+	grid-template-areas:
+		"header"
+		"hero"
+		"resume"
+		"portfolio"
+		"footer";
 }
 
 .header-container {
-  grid-area: header;
-  position: sticky;
-  top: 0;
-  @include section-grid;
+	grid-area: header;
+	position: sticky;
+	top: 0;
+	@include section-grid;
 }
 
 .header {
-  grid-area: content;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: "logo socials navigation";
-  align-items: center;
+	grid-area: content;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: "logo socials navigation";
+	align-items: center;
 
-  &__logo {
-    grid-area: logo;
-  }
+	&__logo {
+		grid-area: logo;
+	}
 
-  &__socials {
-    grid-area: socials;
+	&__socials {
+		grid-area: socials;
 
-    a {
-      padding-left: $padding-tiny;
-    }
-  }
+		a {
+			padding-left: $padding-tiny;
+		}
+	}
 
-  &__navigation {
-    grid-area: navigation;
+	&__navigation {
+		grid-area: navigation;
 
-    a:link {
-      padding-left: $padding-secondary;
-    }
-  }
+		a:link {
+			padding-left: $padding-secondary;
+		}
+	}
 
-  &__mobile {
-    display: none;
-  }
+	&__mobile {
+		display: none;
+	}
 }
 
 @media screen and (max-width: $breakpoint) {
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    margin-top: 0.8rem;
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: start;
+		margin-top: 0.8rem;
 
-    &__socials,
-    &__navigation {
-      display: none;
-    }
+		&__socials,
+		&__navigation {
+			display: none;
+		}
 
-    &__logo {}
+		&__logo {}
 
-    &__mobile {
-      display: flex;
-      grid-area: hamburger;
-      align-items: end;
-      flex-direction: column;
-    }
+		&__mobile {
+			display: flex;
+			grid-area: hamburger;
+			align-items: end;
+			flex-direction: column;
+		}
 
-    &__mobile--hamburger {
-      display: inline-block;
-      cursor: pointer;
-      background-color: transparent;
-      border: none !important;
-      padding: 0;
-    }
+		&__mobile--hamburger {
+			display: inline-block;
+			cursor: pointer;
+			background-color: transparent;
+			border: none !important;
+			padding: 0;
+		}
 
-    &__mobile--hamburger-line {
-      display: block;
-      width: 25px;
-      height: 3px;
-      background-color: black;
-      margin: 4px 0;
-    }
+		&__mobile--hamburger-line {
+			display: block;
+			width: 25px;
+			height: 3px;
+			background-color: black;
+			margin: 4px 0;
+		}
 
-    &__mobile--menu {
-      display: none;
-      background-color: $color-background;
-      padding: $padding-tiny;
-      border-radius: 3%;
+		&__mobile--menu {
+			display: none;
+			background-color: $color-background;
+			padding: $padding-tiny;
+			border-radius: 3%;
 
-      ul {
-        list-style-type: none;
-        padding: 0;
-      }
+			ul {
+				list-style-type: none;
+				padding: 0;
+			}
 
-      li {
-        margin: 10px 0;
-      }
+			li {
+				margin: 10px 0;
+			}
 
-      a {
-        text-decoration: none;
-      }
-    }
+			a {
+				text-decoration: none;
+			}
+		}
 
-    &__mobile--menu-visible {
-      display: flex;
-      align-items: end;
-    }
-  }
+		&__mobile--menu-visible {
+			display: flex;
+			align-items: end;
+			margin-top: 15px;
+			border: $color-borders 2px dashed;
+			box-shadow: 6px 6px $color-box-shadow;
+		}
+	}
 }
 
 .link {
-  margin-top: rem(-1 * ($navbar-headbutt));
-  padding-bottom: rem($navbar-headbutt);
-  display: block;
+	margin-top: rem(-1 * ($navbar-headbutt));
+	padding-bottom: rem($navbar-headbutt);
+	display: block;
 }
 
 .hero-container {
-  grid-area: hero;
-  @include section-grid;
-  margin-bottom: $margin-section;
-  margin-top: $padding-primary;
+	grid-area: hero;
+	@include section-grid;
+	margin-bottom: $margin-section;
+	margin-top: $padding-primary;
 }
 
 .hero {
-  grid-area: content;
-  display: grid;
-  grid-template-columns: 1fr 340px;
-  grid-template-rows: rem(100) auto;
-  grid-template-areas:
-    "header image"
-    "body image";
+	grid-area: content;
+	display: grid;
+	grid-template-columns: 1fr 340px;
+	grid-template-rows: rem(100) auto;
+	grid-template-areas:
+		"header image"
+		"body image";
 
-  &__header {
-    grid-area: header;
-    padding-top: rem(50);
-  }
+	&__header {
+		grid-area: header;
+		padding-top: rem(50);
+	}
 
-  &__body {
-    grid-area: body;
-    padding-top: rem(50);
-    margin-right: rem(32);
-    line-height: rem(25);
-  }
+	&__body {
+		grid-area: body;
+		padding-top: rem(50);
+		margin-right: rem(32);
+		line-height: rem(25);
+	}
 
-  &__image {
-    grid-area: image;
-    width: 340px;
-    border-radius: 100%;
-  }
+	&__image {
+		grid-area: image;
+		width: 340px;
+		border-radius: 100%;
+	}
 }
 
 @media (max-width: $breakpoint) {
-  .hero {
-    display: flex;
-    flex-direction: column;
-  }
+	.hero {
+		display: flex;
+		flex-direction: column;
+	}
 
-  .hero__image {
-    flex-basis: 100%;
-  }
+	.hero__image {
+		flex-basis: 100%;
+	}
 }
 
 .resume-container {
-  grid-area: resume;
-  @include section-grid;
+	grid-area: resume;
+	@include section-grid;
 }
 
 .resume {
-  margin-bottom: $margin-section;
-  padding-top: $margin-section;
-  grid-area: content;
+	margin-bottom: $margin-section;
+	padding-top: $margin-section;
+	grid-area: content;
 
-  h2 {
-    padding-bottom: $padding-block;
-  }
+	h2 {
+		padding-bottom: $padding-block;
+	}
 }
 
 .resume-item {
-  margin-bottom: $padding-primary;
+	margin-bottom: $padding-primary;
 
-  &__headline {
-    display: flex;
-    justify-content: space-between;
-  }
+	&__headline {
+		display: flex;
+		justify-content: space-between;
+	}
 
-  @media screen and (max-width: $breakpoint) {
-    &__headline {
-      flex-direction: column;
-      align-items: flex-start;
-      row-gap: 0.5rem;
-    }
-  }
+	@media screen and (max-width: $breakpoint) {
+		&__headline {
+			flex-direction: column;
+			align-items: flex-start;
+			row-gap: 0.5rem;
+		}
+	}
 
-  &__description {
-    padding-top: $padding-tiny;
-  }
+	&__description {
+		padding-top: $padding-tiny;
+	}
 
-  &__list {
-    padding-left: $padding-primary;
-  }
+	&__list {
+		padding-left: $padding-primary;
+	}
 
-  &__list-item {
-    padding-top: $padding-tiny;
-  }
+	&__list-item {
+		padding-top: $padding-tiny;
+	}
 }
 
 .portfolio-container {
-  grid-area: portfolio;
-  // margin-bottom: 500px;
-  @include section-grid;
+	grid-area: portfolio;
+	@include section-grid;
 }
 
 .portfolio {
-  margin-bottom: $margin-section;
-  padding-top: $margin-section;
-  grid-area: content;
+	margin-bottom: $margin-section;
+	padding-top: $margin-section;
+	grid-area: content;
 
-  &__header {
-    padding-bottom: $padding-primary;
-  }
+	&__header {
+		padding-bottom: $padding-primary;
+	}
 
-  &__table-of-contents {
-    padding-bottom: $padding-block;
+	&__table-of-contents {
+		padding-bottom: $padding-block;
 
-    h3 {
-      padding-bottom: $padding-secondary;
-    }
+		h3 {
+			padding-bottom: $padding-secondary;
+		}
 
-    ul {
-      // padding-left: $padding-primary;
-    }
+		ul {
+			// padding-left: $padding-primary;
+		}
 
-    li {
-      padding-bottom: $padding-secondary;
-    }
-  }
+		li {
+			padding-bottom: $padding-secondary;
+		}
+	}
 }
 
 // Portfolio Item
 .project {
-  padding: 0px $padding-secondary;
-  margin-bottom: $padding-block;
+	padding: 0px $padding-secondary;
+	margin-bottom: $padding-block;
 
-  span {
-    padding-right: $padding-secondary;
-    padding-left: $padding-secondary;
-  }
+	span {
+		padding-right: $padding-secondary;
+		padding-left: $padding-secondary;
+	}
 
-  &__header {
-    padding-bottom: $padding-secondary;
-  }
+	&__header {
+		padding-bottom: $padding-secondary;
+	}
 
-  &__links {
-    padding-bottom: $padding-primary;
-  }
+	&__links {
+		padding-bottom: $padding-primary;
+	}
 
-  p {
-    padding-bottom: $padding-secondary;
-  }
+	p {
+		padding-bottom: $padding-secondary;
+	}
 
-  ul {
-    padding-left: $padding-secondary;
-    padding-bottom: $padding-secondary;
-  }
+	ul {
+		padding-left: $padding-secondary;
+		padding-bottom: $padding-secondary;
+	}
 
-  li {
-    padding-bottom: $padding-tiny;
-  }
+	li {
+		padding-bottom: $padding-tiny;
+	}
 
-  img {
-    float: right;
-    margin-left: $padding-primary;
-    margin-bottom: $padding-primary;
-  }
+	img {
+		float: right;
+		margin-left: $padding-primary;
+		margin-bottom: $padding-primary;
+	}
 
-  .mobile-image {
-    width: 200px;
-  }
+	.mobile-image {
+		width: 200px;
+	}
 
-  .desktop-image {
-    width: 400px;
-  }
+	.desktop-image {
+		width: 400px;
+	}
 
-  @media screen and (max-width: $breakpoint) {
+	@media screen and (max-width: $breakpoint) {
 
-    .mobile-image,
-    .desktop-image {
-      display: none;
-    }
-  }
+		.mobile-image,
+		.desktop-image {
+			display: none;
+		}
+	}
 }
 
 .footer {
-  grid-area: footer;
+	grid-area: footer;
 }
